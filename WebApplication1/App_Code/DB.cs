@@ -27,7 +27,7 @@ namespace WebApplication1.App_Code
         /// <returns>返回SqlConnection对象</returns>
         public SqlConnection GetCon()
         {
-            return new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"].ToString());
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         }
 
         /// <summary>
